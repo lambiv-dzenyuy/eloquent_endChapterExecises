@@ -30,3 +30,12 @@ for(var count=0; count<100; count++){
   	else{console.log(count)}
 }
 
+
+//CHESSBOARD
+//generate a 8x8 grid chessboard
+
+for(var count=0; count<8; count++){
+	if (count%2 ==0){
+		console.log(` #`.repeat(8))}
+    else{console.log(`# `.repeat(8))}
+}

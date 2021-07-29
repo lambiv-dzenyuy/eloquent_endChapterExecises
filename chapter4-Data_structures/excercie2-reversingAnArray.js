@@ -31,4 +31,4 @@ function reverseArray(array){
     return array;
     
   }
-  console.log(reverseArrayInPlace([1, 2, 3]))
+  console.log(reverseArrayInPlace([1, 2, 3]));

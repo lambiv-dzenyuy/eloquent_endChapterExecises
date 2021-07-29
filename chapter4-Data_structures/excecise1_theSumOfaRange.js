@@ -4,12 +4,12 @@ an array containing all the numbers from start up to (and including) end .
 */
 
 
-let arayOfNumbersInRange= [];
+let arrayOfNumbersInRange= [];
 function nRange(start, end){
 	for(let count=start; count<=end; count++){
-    	arayOfNumbersInRange.push(count);
+    	arrayOfNumbersInRange.push(count);
     }
-  return arayOfNumbersInRange;
+  return arrayOfNumbersInRange;
 }
 
 
@@ -35,7 +35,7 @@ indeed return 55.*/
 console.log(nRange(1, 10));
 //>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-console.log(sumArray(arayOfNumbersInRange));
+console.log(sumArray(arrayOfNumbersInRange));
  //>55
 
 
@@ -50,17 +50,17 @@ old behavior.
 function nRange(start, end, step){
 	if(step==undefined){
  		for(let count=start; count<=end; count++){
-    	arayOfNumbersInRange.push(count);}
+    	arrayOfNumbersInRange.push(count);}
     }
     else{
     	let count=Math.min(start, end);
         let stop=Math.max(start, end);
         while(count<=stop){
-            arayOfNumbersInRange.push(count);
+            arrayOfNumbersInRange.push(count);
             count += step;
         }
     }
-    return arayOfNumbersInRange;
+    return arrayOfNumbersInRange;
 
 }
 

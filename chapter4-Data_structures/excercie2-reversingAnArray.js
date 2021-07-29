@@ -17,3 +17,18 @@ function reverseArray(array){
     
   }
   console.log(reverseArray([1, 2, 3]))
+
+
+  //second array
+
+  function reverseArrayInPlace(array){
+    let end=array.length;
+    for(let count=end-1; count>+0; count--){
+      let temp=array[count];
+      array.pop(array[count]);
+      array.push(temp);
+    }
+    return array;
+    
+  }
+  console.log(reverseArrayInPlace([1, 2, 3]))

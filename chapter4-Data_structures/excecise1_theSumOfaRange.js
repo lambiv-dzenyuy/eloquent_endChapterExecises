@@ -37,3 +37,31 @@ console.log(nRange(1, 10));
 
 console.log(sumArray(arayOfNumbersInRange));
  //>55
+
+
+ /*
+ As a bonus assignment, modify your range function to take an optional third
+argument that indicates the “step” value used when building the array. If no
+step is given, the elements go up by increments of one, corresponding to the
+old behavior.
+*/
+
+
+function nRange(start, end, step){
+	if(step==undefined){
+ 		for(let count=start; count<=end; count++){
+    	arayOfNumbersInRange.push(count);}
+    }
+    else{
+    	let count=Math.min(start, end);
+        let stop=Math.max(start, end);
+        while(count<=stop){
+            arayOfNumbersInRange.push(count);
+            count += step;
+        }
+    }
+    return arayOfNumbersInRange;
+
+}
+
+

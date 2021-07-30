@@ -39,4 +39,10 @@ function prepend(list, element){
     list={value: element, rest: list};  //element is added at start of list
     return list; 
 }
-console.log(prepend(arrayToList(arr),5));
+
+
+function nth(list, number){
+    if(!list) return undefined;
+    else if (number==0) return list.value;
+    else return nth(list.rest, number-1)
+}

@@ -12,4 +12,4 @@ function loop(value, testFuncion, updateFunction, bodyFunction){
      bodyFunction(begin);
  }
 }
-loop(10, n => n > 0, n=> n-1, console.log );
+loop(4, n => n < 10, n=> n+1, console.log );

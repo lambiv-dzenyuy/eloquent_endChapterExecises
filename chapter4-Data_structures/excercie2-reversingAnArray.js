@@ -22,13 +22,14 @@ function reverseArray(array){
   //second array
 
   function reverseArrayInPlace(array){
-    let end=array.length;
-    for(let count=end-1; count>+0; count--){
-      let temp=array[count];
-      array.pop(array[count]);
-      array.push(temp);
+    let stop=array.length;
+    for(let count=0; count<Math.floor(stop/2); count++){
+      let temp=array[stop-1-count];
+      array[stop-1-count]=array[count];
+      array[count]=temp;
     }
     return array;
     
   }
-  console.log(reverseArrayInPlace([1, 2, 3]));
+  result=reverseArrayInPlace([1, 2, 3]);
+  console.log(result)

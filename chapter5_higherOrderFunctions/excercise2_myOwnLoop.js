@@ -9,7 +9,7 @@ starts from the beginning.
 
 function loop(value, testFuncion, updateFunction, bodyFunction){
  for(let begin=value; testFuncion(begin); begin=updateFunction(begin)){
-     bodyFunction(value);
+     bodyFunction(begin);
  }
 }
-loop(4, n => n < 10, n=>n+1, console.log );
+loop(10, n => n > 0, n=> n-1, console.log );

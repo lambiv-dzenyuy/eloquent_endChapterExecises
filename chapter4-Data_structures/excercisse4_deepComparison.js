@@ -16,4 +16,4 @@ function deepEqual(value1, value2){
     }
 
 }
-console.log(deepEqual(5, 5));
+

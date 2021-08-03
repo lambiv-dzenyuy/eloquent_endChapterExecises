@@ -58,12 +58,13 @@ Group.prototype[Symbol.iterator] = function() {
     return new GroupIterator(this);
     };
 
-for (let value of Group.from(["a", "b", "c"])) {
+for (let value of Group.from(["a", "b", "c","d"])) {
     console.log(value);
   }
   // → a
   // → b
   // → c
+  //   d
   
   
  

@@ -11,11 +11,10 @@ function primitiveMultiply(a, b) {
 function reliableMultiply(a, b) {
   for (;;) {
   try {
-    let dir = primitiveMultiply(a, b);
-    console.log(dir);
+    return  primitiveMultiply(a, b);
     break;
-  } catch (e) {
-    if(!e instanceof MultiplicatorUnitFailure) return;
+  } catch (error) {
+    if(!error instanceof MultiplicatorUnitFailure) throw error;
    
     
   }

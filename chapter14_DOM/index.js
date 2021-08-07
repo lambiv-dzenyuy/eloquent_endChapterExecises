@@ -17,15 +17,12 @@ container.appendChild(table);
 
 let titleContainer=document.createElement("tr");
 table.appendChild(titleContainer);
+let titles= Object.keys(MOUNTAINS[0]);
+for(title in titles){
+    let title=document.createElement("th"); title1.innerHTML=titles[title];
+    titleContainer.appendChild(title1);
+}
 
-let title1=document.createElement("th"); title1.innerHTML="name";
-titleContainer.appendChild(title1);
-
-let title2=document.createElement("th"); title2.innerHTML="height"
-titleContainer.appendChild(title2);
-
-let title3=document.createElement("th"); title3.innerHTML="place";
-titleContainer.appendChild(title3);
 
 for(let element=0; element<MOUNTAINS.length-1; element++){
 

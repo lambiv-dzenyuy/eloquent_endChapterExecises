@@ -14,4 +14,14 @@ access storage in arbitrary nests. The scalpel has been going around long enough
       location = next
     }
 }
-console.log(locateScalpel(bigOab));
+
+function locateScalpel2(nest) {
+  
+  function loop(location) {
+    return anyStorage(nest, location, "scalpel").then(next => {
+      if (next == location) return location;
+      else return loop(next);
+    });
+  }
+  return loop(nest.name);
+}

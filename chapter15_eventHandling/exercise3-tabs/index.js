@@ -11,6 +11,7 @@ function asTabs(node) {
      console.log(content.length);
      node.insertBefore(button, node.firstChild);
    }
-
+   node.addEventListener("click", even)
   }
+
   asTabs(document.querySelector("tab-panel"));

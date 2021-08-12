@@ -1,27 +1,29 @@
+let node;
+
+let buttons=[]
 function asTabs(node) {
   // Your code here.
- const content=node.getElementsByTagName("div");
-  let buttons=[]
+  const content=node.getElementsByTagName("div");
  for(let i=(content.length)-1; i>=0; i--){
  let button=document.createElement("button");
- button.addEventListener("click", () =>selectTab(tab));
+ button.addEventListener("click", () =>selectTab(button));
  let text=content[i].getAttribute("data-tabname");
   button.innerHTML=text
    buttons.push(button);
    node.insertBefore(button, node.firstChild);
    
 
- function selectTab(selectedTab) {
+ function selectTab(selected) {
   for (let i=0; i<buttons.length; i++) {
-    
-     if(i!=selectTab){
-      i.style.disspay = "none";
-      i.style.color = selected ? "red" : "";
+    let i=selected; 
+    let contents=Array.from(content);
+     if(buttons[i] !=selected){
+      contents[i].style.disspay = "none";
     }
     
   }
 }
-selectTab(buttons[0]);
+selectTab(buttons[2]);
 }
 }
 asTabs(document.querySelector("tab-panel"));

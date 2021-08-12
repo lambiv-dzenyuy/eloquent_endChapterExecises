@@ -1,4 +1,5 @@
       
+const fetch = require("node-fetch");
 
 fetch("https://eloquentjavascript.net/author",   {headers:{Accept: 'application/json'}})
   .then(response => response.text())
@@ -58,3 +59,15 @@ fetch("https://eloquentjavascript.net/author",   {headers:{Accept: 'application/
 <!-- a padding to disable MSIE and Chrome friendly error page -->
 <!-- a padding to disable MSIE and Chrome friendly error page -->
 <!-- a padding to disable MSIE and Chrome friendly error page -->*/
+
+
+
+//combined solution
+
+const header=["text/plain", "text/html", "application/json", "application/rainbows+unicorns"];
+for(let types of header){
+fetch("https://eloquentjavascript.net/author",   {headers: {accept: types}})
+  .then(response => response.text())
+.then(response => console.log(types +'\n'+ response+'\n'));
+}
+ 

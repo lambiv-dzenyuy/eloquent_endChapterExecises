@@ -10,9 +10,9 @@ function asTabs(node) {
  let text=content[i].getAttribute("data-tabname");
   button.innerHTML=text
    buttons.push(button);
-   node.insertBefore(button, node.firstChild);
-   
-
+   node.insertBefore(button, node.firstChild);}}
+   /*
+let contents=documen
  function selectTab(selected) {
   for (let i=0; i<buttons.length; i++) {
     let i=selected; 
@@ -26,4 +26,5 @@ function asTabs(node) {
 selectTab(buttons[2]);
 }
 }
-asTabs(document.querySelector("tab-panel"));
+asTabs(document.querySelector("tab-panel"));*/
+console.log(buttons);
